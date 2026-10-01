@@ -4,6 +4,7 @@ import {
   Menu,
   X,
   Home,
+  MapPin,
   Sparkles,
   GraduationCap,
   Calendar,
@@ -20,6 +21,7 @@ import {
 
 const NAV_ITEMS = [
   { id: 'hero', label: 'Home', icon: Home },
+  { id: 'campus', label: 'Campus Saturdays', icon: MapPin },
   { id: 'services', label: 'Services', icon: Sparkles },
   { id: 'teaching', label: 'Training', icon: GraduationCap },
   { id: 'booking', label: 'Book Appointment', icon: Calendar },

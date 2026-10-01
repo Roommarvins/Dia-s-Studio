@@ -35,7 +35,7 @@ const CampusSaturday = () => {
   return (
     <section
       id="campus"
-      className="relative py-16 md:py-20 px-6 overflow-hidden bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50"
+      className="relative scroll-mt-24 py-16 md:py-20 px-6 overflow-hidden bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50"
       aria-labelledby="campus-heading"
     >
       <div

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Sparkles, Heart, Star, Calendar, GraduationCap, Palette } from 'lucide-react';
+import { Sparkles, Heart, Star, Calendar, GraduationCap, Palette, MapPin, ArrowDown } from 'lucide-react';
+import { CAMPUS_FIRST_DATE } from '../lib/constants';
 
 const MARQUEE_ITEMS = [
   'Gel & Acrylic Nails',
@@ -36,6 +37,22 @@ const Hero = () => {
       />
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
+        <button
+          type="button"
+          onClick={() => scrollTo('campus')}
+          className="group inline-flex items-center gap-2 mb-6 max-w-full rounded-full border border-rose-200/90 bg-white/80 px-4 py-2 text-sm font-medium text-rose-800 shadow-sm backdrop-blur-sm transition hover:bg-rose-50 hover:border-rose-300 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2 opacity-0 animate-fade-in-up"
+        >
+          <MapPin className="w-4 h-4 shrink-0 text-rose-500" aria-hidden="true" />
+          <span className="text-left">
+            Campus Saturdays — she still comes to campus from {CAMPUS_FIRST_DATE}
+          </span>
+          <ArrowDown
+            className="w-4 h-4 shrink-0 text-rose-500 transition-transform group-hover:translate-y-0.5"
+            aria-hidden="true"
+          />
+          <span className="sr-only">Jump to Campus Saturdays</span>
+        </button>
+
         <div className="glass-panel rounded-3xl px-6 py-10 md:px-12 md:py-14 max-w-4xl mx-auto mb-10">
           <div className="flex justify-center mb-6 gap-3" aria-hidden="true">
             <Sparkles className="text-rose-500 w-8 h-8 animate-float" />
