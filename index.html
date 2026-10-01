@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dia's Nail Studio - Professional Nail Care, Lashes & Classes</title>
+    <meta name="description" content="Book nail appointments at Dia's Nail Studio in Accra, Ghana: manicures, gel, acrylics, nail art, and pedicures. We also offer professional lash installation and hands-on nail & lash training classes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="dev-server-hint" hidden style="font-family: system-ui, sans-serif; max-width: 32rem; margin: 2rem auto; padding: 1.5rem; line-height: 1.5;">
+      <h1 style="color: #be185d; font-size: 1.25rem;">Start the dev server</h1>
+      <p>This site is built with Vite and React. Opening <strong>index.html</strong> directly (or with Live Server) shows a blank page.</p>
+      <p><strong>Run in a terminal from this folder:</strong></p>
+      <pre style="background: #fdf2f8; padding: 0.75rem; border-radius: 0.5rem;">npm install
+npm run dev</pre>
+      <p>Then open the URL Vite prints (for example <strong>http://localhost:5173/</strong>). On Windows you can also double-click <strong>start-dev.bat</strong>.</p>
+    </div>
+    <div id="root"></div>
+    <script>
+      if (location.protocol === 'file:') {
+        document.getElementById('dev-server-hint').hidden = false;
+      } else {
+        setTimeout(function () {
+          var root = document.getElementById('root');
+          if (root && !root.hasChildNodes()) {
+            document.getElementById('dev-server-hint').hidden = false;
+          }
+        }, 3000);
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

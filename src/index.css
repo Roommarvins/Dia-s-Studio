@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply font-sans text-sm font-semibold tracking-[0.2em] uppercase;
+  }
+
+  .heading-display {
+    @apply font-display font-bold text-gray-900 tracking-tight;
+  }
+
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-xl border border-white/70 shadow-xl shadow-rose-100/30;
+  }
+
+  .glass-card {
+    @apply bg-white/55 backdrop-blur-lg border border-white/60 shadow-lg shadow-rose-100/20
+      hover:bg-white/70 hover:shadow-xl hover:shadow-rose-200/30
+      hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .glass-card-lash {
+    @apply bg-white/50 backdrop-blur-lg border border-amber-100/60 shadow-lg shadow-amber-100/20
+      hover:bg-white/65 hover:shadow-xl hover:shadow-amber-200/25
+      hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .glass-input {
+    @apply w-full px-4 py-3 rounded-xl border border-white/80 bg-white/70 backdrop-blur-sm
+      text-gray-800 placeholder:text-gray-400
+      transition-all duration-200
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-rose-50/50;
+  }
+
+  .glass-input-error {
+    @apply border-red-300/80 bg-red-50/40 focus-visible:ring-red-400;
+  }
+
+  .glass-input-rose {
+    @apply focus-visible:ring-rose-500;
+  }
+
+  .glass-input-amber {
+    @apply focus-visible:ring-amber-500;
+  }
+
+  .btn-shimmer {
+    @apply relative overflow-hidden rounded-full font-semibold text-white
+      transition-transform duration-200
+      hover:scale-[1.03] active:scale-[0.98]
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-rose-400;
+  }
+
+  .btn-shimmer::before {
+    content: '';
+    @apply absolute inset-0 rounded-full opacity-0 transition-opacity duration-300;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 70%
+    );
+    background-size: 200% 100%;
+  }
+
+  .btn-shimmer:hover::before {
+    @apply opacity-100 animate-shimmer;
+  }
+
+  .btn-primary {
+    @apply btn-shimmer bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600
+      px-8 py-4 shadow-lg shadow-rose-300/40 hover:shadow-xl hover:shadow-rose-400/50;
+  }
+
+  .btn-secondary {
+    @apply btn-shimmer bg-gradient-to-r from-purple-600 via-rose-600 to-purple-700
+      px-8 py-4 shadow-lg shadow-purple-300/30 hover:shadow-xl;
+  }
+
+  .btn-class {
+    @apply btn-shimmer bg-gradient-to-r from-amber-600 via-rose-600 to-amber-700
+      px-8 py-4 shadow-lg shadow-amber-300/30 hover:shadow-xl;
+  }
+
+  .btn-outline {
+    @apply rounded-full font-semibold border-2 border-rose-300/80 text-rose-700
+      bg-white/40 backdrop-blur-sm px-8 py-4
+      hover:bg-rose-500 hover:text-white hover:border-rose-500
+      hover:scale-[1.03] active:scale-[0.98]
+      transition-all duration-200 shadow-md
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2;
+  }
+
+  .section-divider {
+    @apply h-px max-w-xs mx-auto bg-gradient-to-r from-transparent via-rose-300/60 to-transparent;
+  }
+
+  .ambient-orb {
+    @apply absolute rounded-full blur-3xl opacity-40 pointer-events-none;
+  }
+
+  .marquee-track {
+    @apply flex w-max gap-10 animate-marquee;
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600;
+  }
+
+  .text-gradient-lash {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-rose-600 to-amber-600;
+  }
+
+  .bg-mesh-hero {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% 40%, rgba(251, 207, 232, 0.5), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(233, 213, 255, 0.45), transparent),
+      radial-gradient(ellipse 50% 60% at 60% 80%, rgba(254, 243, 199, 0.35), transparent);
+  }
+
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+}
