@@ -6,7 +6,7 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const TIKTOK_URL =
   "https://www.tiktok.com/@nanayaa_0000?_t=ZM-8y1mxTwIUI2&_r=1";
 export const INSTAGRAM_URL = "https://www.instagram.com/nanayaa_000/";
-export const LOGO_SRC = "/Naa.jpg";
+export const LOGO_SRC = "/logo.png";
 export const LOGO_ALT = `${BUSINESS_NAME} logo`;
 
 export const NAIL_SERVICES = [

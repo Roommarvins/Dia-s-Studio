@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, Heart, Sparkles, Star } from 'lucide-react';
+import { LOGO_ALT, LOGO_SRC } from '../lib/constants';
 
 interface CountdownTimerProps {
   onCountdownEnd?: () => void;
@@ -61,11 +62,13 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ onCountdownEnd }) => {
         {/* Logo and Brand */}
         <div className="flex justify-center mb-8 animate-fade-in-up">
           <div className="flex items-center space-x-4">
-            <img 
-              src="/Naa.jpg" 
-              alt="Dia's Nail Studio Logo" 
-              className="w-20 h-20 rounded-full object-cover border-4 border-rose-400 shadow-xl animate-pulse"
-            />
+            <span className="inline-flex h-24 w-24 shrink-0 overflow-hidden rounded-3xl bg-black ring-1 ring-black/10">
+              <img
+                src={LOGO_SRC}
+                alt={LOGO_ALT}
+                className="h-full w-full object-contain"
+              />
+            </span>
             <div className="text-left">
               <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">
                 Dia's Nail Studio

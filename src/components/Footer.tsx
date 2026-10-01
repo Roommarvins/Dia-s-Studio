@@ -30,11 +30,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 md:gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img
-                src={LOGO_SRC}
-                alt={LOGO_ALT}
-                className="w-12 h-12 rounded-full object-cover border-2 border-rose-400/60 shadow-lg ring-2 ring-white/10"
-              />
+              <span className="inline-flex h-20 w-20 shrink-0 overflow-hidden rounded-3xl bg-black ring-1 ring-white/15">
+                <img
+                  src={LOGO_SRC}
+                  alt={LOGO_ALT}
+                  className="h-full w-full object-contain"
+                />
+              </span>
               <div>
                 <h3 className="font-display text-2xl font-bold bg-gradient-to-r from-rose-300 to-purple-300 bg-clip-text text-transparent">
                   {BUSINESS_NAME}
